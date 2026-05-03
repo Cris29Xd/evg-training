@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mafe Jiménez — Influencer | Medellín, Colombia</title>
+  <meta name="description" content="Mafe Jiménez — Creadora de contenido lifestyle, moda y fitness desde Medellín, Colombia. Colaboraciones y publicidad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --rose:        #e8708a;
+      --rose-light:  #f5a8bc;
+      --rose-pale:   #fdf0f4;
+      --blush:       #fce4ec;
+      --cream:       #fffaf9;
+      --dark:        #1a1118;
+      --muted:       #7a6471;
+      --white:       #ffffff;
+      --gradient:    linear-gradient(135deg, #f9a8c9 0%, #e8708a 50%, #c94f7c 100%);
+      --gradient-bg: linear-gradient(160deg, #fff0f5 0%, #fce4ec 40%, #f9f0ff 100%);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ──── NAV ──── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(232,112,138,0.12);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--rose); }
+
+    /* ──── HERO ──── */
+    .hero {
+      min-height: 100vh;
+      background: var(--gradient-bg);
+      display: flex;
+      align-items: center;
+      padding: 120px 48px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(232,112,138,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(249,168,201,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text { }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(232,112,138,0.1);
+      border: 1px solid rgba(232,112,138,0.25);
+      color: var(--rose);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .hero-name span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-bio {
+      font-size: 1.05rem;
+      color: var(--muted);
+      font-weight: 400;
+      margin-bottom: 36px;
+      max-width: 420px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--dark);
+      display: block;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .stat-divider {
+      width: 1px;
+      background: rgba(232,112,138,0.25);
+      align-self: stretch;
+      margin: 4px 0;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gradient);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      box-shadow: 0 8px 24px rgba(232,112,138,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(232,112,138,0.45);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--rose);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      border: 1.5px solid rgba(232,112,138,0.4);
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(232,112,138,0.06);
+      border-color: var(--rose);
+    }
+
+    /* ──── HERO PHOTO ──── */
+    .hero-photo-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+    }
+
+    .hero-card {
+      background: #fff;
+      border-radius: 28px;
+      padding: 32px 28px;
+      box-shadow: 0 32px 80px rgba(180,80,120,0.15), 0 8px 24px rgba(0,0,0,0.06);
+      max-width: 340px;
+      width: 100%;
+      position: relative;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 30px;
+      background: var(--gradient);
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .ig-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .ig-avatar {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid transparent;
+      background: var(--gradient) border-box;
+      outline: 3px solid transparent;
+      box-shadow: 0 0 0 3px #e8708a;
+    }
+
+    .ig-info { }
+
+    .ig-name-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ig-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--dark);
+    }
+
+    .ig-verified {
+      width: 16px;
+      height: 16px;
+      background: var(--gradient);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .ig-verified svg { width: 9px; height: 9px; }
+
+    .ig-handle {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    .ig-bio-text {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--rose-pale);
+    }
+
+    .ig-stats-row {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .ig-stat {
+      text-align: center;
+    }
+
+    .ig-stat-num {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--dark);
+    }
+
+    .ig-stat-label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .ig-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .ig-mini-grid img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      transition: opacity 0.2s;
+    }
+
+    .ig-mini-grid img:hover { opacity: 0.85; }
+
+    .hero-badge {
+      position: absolute;
+      top: -16px; right: -16px;
+      background: var(--gradient);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      border-radius: 50px;
+      box-shadow: 0 4px 16px rgba(232,112,138,0.4);
+    }
+
+    /* ──── SECTION SHARED ──── */
+    section { padding: 96px 48px; }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 56px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ──── SOBRE MÍ ──── */
+    #sobre {
+      background: #fff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 24px;
+      display: block;
+    }
+
+    .about-img-accent {
+      position: absolute;
+      bottom: -20px; right: -20px;
+      width: 140px;
+      height: 140px;
+      background: var(--gradient);
+      border-radius: 20px;
+      z-index: -1;
+      opacity: 0.35;
+    }
+
+    .about-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--blush);
+      color: var(--rose);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin: 6px 6px 6px 0;
+    }
+
+    .about-pills { margin-bottom: 28px; }
+
+    .about-text {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* ──── SERVICIOS ──── */
+    #servicios {
+      background: var(--gradient-bg);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px 28px;
+      box-shadow: 0 4px 24px rgba(180,80,120,0.07);
+      transition: transform 0.25s, box-shadow 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(180,80,120,0.14);
+    }
+
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 18px;
+      display: block;
+    }
+
+    .service-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ──── GALERÍA ──── */
+    #galeria {
+      background: #fff;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 1;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img { transform: scale(1.05); }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(200,70,110,0.75) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+    .gallery-overlay-text {
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .gallery-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* ──── CONTACTO ──── */
+    #contacto {
+      background: var(--dark);
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contacto::before {
+      content: '';
+      position: absolute;
+      top: -150px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(232,112,138,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    #contacto .section-label { color: var(--rose-light); }
+
+    #contacto .section-title { color: #fff; margin: 0 auto 16px; }
+
+    .contact-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.55);
+      max-width: 480px;
+      margin: 0 auto 48px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 48px 40px;
+      max-width: 560px;
+      margin: 0 auto;
+      backdrop-filter: blur(12px);
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--rose);
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    .contact-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .contact-handle {
+      color: var(--rose-light);
+      font-size: 0.9rem;
+      margin-bottom: 28px;
+    }
+
+    .contact-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: rgba(232,112,138,0.12);
+      border: 1px solid rgba(232,112,138,0.3);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 14px 24px;
+      border-radius: 50px;
+      transition: all 0.2s;
+    }
+
+    .contact-link:hover {
+      background: var(--rose);
+      border-color: var(--rose);
+      transform: translateY(-2px);
+    }
+
+    .contact-link.primary {
+      background: var(--gradient);
+      border: none;
+      box-shadow: 0 8px 24px rgba(232,112,138,0.3);
+    }
+
+    .contact-link.primary:hover {
+      box-shadow: 0 12px 32px rgba(232,112,138,0.45);
+    }
+
+    /* ──── FOOTER ──── */
+    footer {
+      background: #120d10;
+      color: rgba(255,255,255,0.35);
+      text-align: center;
+      padding: 28px 48px;
+      font-size: 0.8rem;
+    }
+
+    footer a {
+      color: var(--rose-light);
+      text-decoration: none;
+    }
+
+    /* ──── RESPONSIVE ──── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { gap: 20px; }
+      section { padding: 72px 24px; }
+      .hero { padding: 100px 24px 60px; }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+      }
+
+      .hero-stats { justify-content: center; }
+      .hero-cta { justify-content: center; }
+      .hero-bio { margin: 0 auto 36px; }
+      .hero-tag { margin-left: auto; margin-right: auto; }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .hero-name { font-size: 2.4rem; }
+    }
+
+    /* ──── ANIMATIONS ──── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up {
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .fade-up-1 { animation-delay: 0.1s; }
+    .fade-up-2 { animation-delay: 0.25s; }
+    .fade-up-3 { animation-delay: 0.4s; }
+    .fade-up-4 { animation-delay: 0.55s; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Mafe Jiménez</div>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre mí</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-text">
+        <div class="hero-tag fade-up fade-up-1">
+          📍 Medellín, Colombia
+        </div>
+        <h1 class="hero-name fade-up fade-up-2">
+          Hola, soy<br/><span>Mafe Jiménez</span>
+        </h1>
+        <p class="hero-bio fade-up fade-up-3">
+          Creadora de contenido de lifestyle, moda y fitness con más de 21K seguidores.
+          Colaboro con marcas que quieren conectar de forma auténtica con su audiencia.
+        </p>
+        <div class="hero-stats fade-up fade-up-3">
+          <div class="stat">
+            <span class="stat-num">21K</span>
+            <span class="stat-label">Seguidores</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">31</span>
+            <span class="stat-label">Posts</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Orgánico</span>
+          </div>
+        </div>
+        <div class="hero-cta fade-up fade-up-4">
+          <a href="#contacto" class="btn-primary">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            Hablemos
+          </a>
+          <a href="#galeria" class="btn-secondary">
+            Ver galería →
+          </a>
+        </div>
+      </div>
+
+      <!-- INSTAGRAM CARD -->
+      <div class="hero-photo-wrap fade-up fade-up-2">
+        <div class="hero-card">
+          <div class="hero-badge">✦ Instagram</div>
+          <div class="ig-header">
+            <img class="ig-avatar" src="assets/profile.jpg" alt="Mafe Jiménez" />
+            <div class="ig-info">
+              <div class="ig-name-row">
+                <span class="ig-name">Mafe 💘</span>
+                <span class="ig-verified">
+                  <svg viewBox="0 0 10 10" fill="none"><path d="M5 1l1.1 1.6L8 2.5 7.5 4.5l1.2 1.5-2 .6L5 9l-1.7-2.4-2 -.6L2.5 4.5 2 2.5l1.9.1L5 1z" fill="#fff"/></svg>
+                </span>
+              </div>
+              <div class="ig-handle">@mafejimenezzz_</div>
+            </div>
+          </div>
+          <div class="ig-bio-text">
+            Medellín/ Colombia 📍<br/>
+            Publicidad y pautas 📸🤍
+          </div>
+          <div class="ig-stats-row">
+            <div class="ig-stat">
+              <div class="ig-stat-num">31</div>
+              <div class="ig-stat-label">Posts</div>
+            </div>
+            <div class="ig-stat">
+              <div class="ig-stat-num">21K</div>
+              <div class="ig-stat-label">Seguidores</div>
+            </div>
+            <div class="ig-stat">
+              <div class="ig-stat-num">256</div>
+              <div class="ig-stat-label">Siguiendo</div>
+            </div>
+          </div>
+          <div class="ig-mini-grid">
+            <img src="assets/post_1.jpg" alt="post 1" />
+            <img src="assets/post_2.jpg" alt="post 2" />
+            <img src="assets/post_3.jpg" alt="post 3" />
+            <img src="assets/post_4.jpg" alt="post 4" />
+            <img src="assets/post_5.jpg" alt="post 5" />
+            <img src="assets/post_6.jpg" alt="post 6" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img class="about-img" src="assets/post_8.jpg" alt="Mafe Jiménez" />
+          <div class="about-img-accent"></div>
+        </div>
+        <div>
+          <span class="section-label">Sobre mí</span>
+          <h2 class="section-title">Contenido que<br/>conecta de verdad</h2>
+          <div class="about-pills">
+            <span class="about-pill">🌸 Lifestyle</span>
+            <span class="about-pill">👗 Moda</span>
+            <span class="about-pill">🏋🏼‍♀️ Fitness</span>
+            <span class="about-pill">🎉 Eventos</span>
+            <span class="about-pill">📸 Fotografía</span>
+          </div>
+          <p class="about-text">
+            Soy Mafe, creadora de contenido desde Medellín. Mi comunidad de más de 21K personas
+            me sigue por contenido auténtico sobre lifestyle, moda, fitness y lo mejor de Medellín.
+          </p>
+          <br/>
+          <p class="about-text">
+            Trabajo con marcas que comparten mis valores: autenticidad, estética cuidada
+            y conexión real con la audiencia. Cada colaboración la hago con el mismo cariño
+            que le pongo a mi contenido propio.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="container">
+      <span class="section-label">Colaboraciones</span>
+      <h2 class="section-title">¿Cómo podemos<br/>trabajar juntos?</h2>
+      <p class="section-sub">
+        Ofrezco distintos formatos de colaboración adaptados a los objetivos de tu marca.
+      </p>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-icon">📸</span>
+          <div class="service-title">Publicaciones & Reels</div>
+          <p class="service-desc">
+            Contenido integrado en mi feed con estética cuidada. Posts fotográficos
+            y reels con alta retención, ideales para dar a conocer tu producto o servicio.
+          </p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">💬</span>
+          <div class="service-title">Stories publicitarias</div>
+          <p class="service-desc">
+            Menciones y reviews en stories con link directo a tu tienda o perfil.
+            Formato cercano y directo que genera conversión inmediata.
+          </p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">👗</span>
+          <div class="service-title">Moda & Lifestyle</div>
+          <p class="service-desc">
+            Colaboraciones de ropa, accesorios y productos de lifestyle.
+            Experiencia comprobada mostrando prendas y outfits de forma natural y atractiva.
+          </p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🏋🏼‍♀️</span>
+          <div class="service-title">Fitness & Bienestar</div>
+          <p class="service-desc">
+            Contenido de fitness, ropa deportiva y bienestar. Mi audiencia tiene alto interés
+            en salud y estilo de vida activo — el match perfecto para marcas del sector.
+          </p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🎉</span>
+          <div class="service-title">Eventos & Experiencias</div>
+          <p class="service-desc">
+            Asistencia y cobertura de eventos en Medellín. Contenido en vivo que
+            genera expectativa y FOMO entre tu audiencia objetivo.
+          </p>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🤝</span>
+          <div class="service-title">Paquetes a medida</div>
+          <p class="service-desc">
+            ¿Tienes algo diferente en mente? Hablemos y diseñamos una colaboración
+            personalizada que encaje perfectamente con tus objetivos de campaña.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria">
+    <div class="container">
+      <span class="section-label">Galería</span>
+      <h2 class="section-title">Contenido real,<br/>estética propia</h2>
+      <p class="section-sub">
+        Una muestra de lo que encontrarás en mi Instagram. Cada foto cuenta una historia.
+      </p>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/post_1.jpg" alt="Mafe lifestyle" />
+          <div class="gallery-overlay">
+            <span class="gallery-overlay-text">Lifestyle ✨</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/post_2.jpg" alt="Mafe fotografía" />
+          <div class="gallery-overlay">
+            <span class="gallery-overlay-text">Fotografía 📸</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/post_3.jpg" alt="Mafe fitness" />
+          <div class="gallery-overlay">
+            <span class="gallery-overlay-text">Fitness 🏋🏼‍♀️</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/post_4.jpg" alt="Mafe lifestyle" />
+          <div class="gallery-overlay">
+            <span class="gallery-overlay-text">Lifestyle 💘</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/post_7.jpg" alt="Mafe eventos" />
+          <div class="gallery-overlay">
+            <span class="gallery-overlay-text">Eventos 🎉</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/post_9.jpg" alt="Mafe colaboración moda" />
+          <div class="gallery-overlay">
+            <span class="gallery-overlay-text">Colaboración de moda 👗</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/post_5.jpg" alt="Mafe" />
+          <div class="gallery-overlay">
+            <span class="gallery-overlay-text">Personal 💘</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/post_6.jpg" alt="Mafe estética" />
+          <div class="gallery-overlay">
+            <span class="gallery-overlay-text">Estética 🤍</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/post_8.jpg" alt="Mafe" />
+          <div class="gallery-overlay">
+            <span class="gallery-overlay-text">Lifestyle ✨</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cta">
+        <a href="https://www.instagram.com/mafejimenezzz_/" target="_blank" class="btn-primary">
+          Ver más en Instagram →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <span class="section-label">Contacto</span>
+      <h2 class="section-title">¿Tienes una<br/>colaboración en mente?</h2>
+      <p class="contact-sub">
+        Escríbeme por Instagram y cuéntame sobre tu marca. Respondo en menos de 24 horas.
+      </p>
+      <div class="contact-card">
+        <img class="contact-avatar" src="assets/profile.jpg" alt="Mafe Jiménez" />
+        <div class="contact-name">Mafe Jiménez</div>
+        <div class="contact-handle">@mafejimenezzz_</div>
+        <div class="contact-options">
+          <a href="https://www.instagram.com/mafejimenezzz_/" target="_blank" class="contact-link primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+            Escribir en Instagram
+          </a>
+          <a href="https://www.instagram.com/direct/new/" target="_blank" class="contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            Enviar DM directo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Mafe Jiménez · <a href="https://www.instagram.com/mafejimenezzz_/" target="_blank">@mafejimenezzz_</a> · Medellín, Colombia</p>
+  </footer>
+
+</body>
+</html>

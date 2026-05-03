@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-const HANDLE = 'evgtraining';
+const HANDLE = 'mafejimenezzz_';
 
 async function downloadImage(url, filepath) {
   return new Promise((resolve, reject) => {
